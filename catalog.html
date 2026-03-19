@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog | Ashana Art</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Elegant & Warm -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="navbar fade-in">
+        <div class="container nav-content">
+            <a href="index.html" class="brand">Ashana Art <span class="slogan">- Gift Shop</span></a>
+            <nav class="nav-links">
+                <a href="index.html#products">Best Sellers</a>
+                <a href="catalog.html" style="color: var(--accent-color);">Catalog</a>
+                <a href="index.html#collections">Seasonal</a>
+                <a href="index.html#about">Our Story</a>
+                <!-- Future cart anchor -->
+                <button class="cart-toggle" id="cart-btn" aria-label="Open cart">Cart (<span id="cart-count">0</span>)</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CATALOG HEADER -->
+    <section class="section bg-secondary text-center fade-in" style="padding-top: 8rem; padding-bottom: 4rem;">
+        <div class="container">
+            <h1 class="section-title" style="margin-bottom: 1rem;">Full Catalog</h1>
+            <p class="max-w-md">Explore our entire collection of handcrafted gifts, candles, and personalized sets crafted for those you love.</p>
+        </div>
+    </section>
+
+    <!-- FULL CATALOG GRID -->
+    <section class="section container">
+        <!-- Visual filter bar -->
+        <div class="filter-bar fade-in" style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 3rem; flex-wrap: wrap;">
+            <button class="btn btn-primary filter-btn" data-filter="all" style="padding: 0.5rem 1.5rem;">All</button>
+            <button class="btn btn-outline filter-btn" data-filter="Candles" style="padding: 0.5rem 1.5rem;">Candles</button>
+            <button class="btn btn-outline filter-btn" data-filter="SnowGlobe Cups" style="padding: 0.5rem 1.5rem;">SnowGlobes</button>
+            <button class="btn btn-outline filter-btn" data-filter="Gifts Combos" style="padding: 0.5rem 1.5rem;">Gifts Combos</button>
+        </div>
+
+        <div class="product-grid" id="fullCatalogGrid">
+            
+            <!-- Items -->
+            <article class="product-card fade-in" data-id="1" data-price="25.00">
+                <div class="product-img-wrapper">
+                    <img src="candles_1.png" class="product-img" alt="Candle">
+                    <img src="candles_1_hover.png" class="product-img-hover" alt="Using Candle">
+                </div>
+                <div class="product-info">
+                    <span class="category">Candles</span>
+                    <h3 class="product-title">Warm Vanilla Aroma</h3>
+                    <p class="product-price">$25.00</p>
+                    <button class="btn btn-outline add-to-cart-btn">Add to Cart</button>
+                </div>
+            </article>
+            
+            <article class="product-card fade-in" data-id="4" data-price="28.00">
+                <div class="product-img-wrapper">
+                    <img src="candles_2.png" class="product-img" alt="Candle">
+                    <img src="candles_2_hover.png" class="product-img-hover" alt="Using Candle">
+                </div>
+                <div class="product-info">
+                    <span class="category">Candles</span>
+                    <h3 class="product-title">Cinnamon Spiced Apple</h3>
+                    <p class="product-price">$28.00</p>
+                    <button class="btn btn-outline add-to-cart-btn">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card fade-in" data-id="2" data-price="35.00">
+                <div class="product-img-wrapper">
+                    <img src="snowglobe_1.png" class="product-img" alt="SnowGlobe Cup">
+                    <img src="snowglobe_1_hover.png" class="product-img-hover" alt="Using Snowglobe">
+                </div>
+                <div class="product-info">
+                    <span class="category">SnowGlobe Cups</span>
+                    <h3 class="product-title">Personalized Glitter Cup</h3>
+                    <p class="product-price">$35.00</p>
+                    <button class="btn btn-outline add-to-cart-btn">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card fade-in" data-id="5" data-price="40.00">
+                <div class="product-img-wrapper">
+                    <img src="snowglobe_2.png" class="product-img" alt="SnowGlobe Cup">
+                    <img src="snowglobe_2_hover.png" class="product-img-hover" alt="Using Snowglobe">
+                </div>
+                <div class="product-info">
+                    <span class="category">SnowGlobe Cups</span>
+                    <h3 class="product-title">Rose Gold Tumbler</h3>
+                    <p class="product-price">$40.00</p>
+                    <button class="btn btn-outline add-to-cart-btn">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card fade-in" data-id="3" data-price="55.00">
+                <div class="product-img-wrapper">
+                    <img src="combos_1.png" class="product-img" alt="Gift Combo">
+                    <img src="combos_1_hover.png" class="product-img-hover" alt="Using Combo">
+                </div>
+                <div class="product-info">
+                    <span class="category">Gifts Combos</span>
+                    <h3 class="product-title">Cozy Evening Bundle</h3>
+                    <p class="product-price">$55.00</p>
+                    <button class="btn btn-outline add-to-cart-btn">Add to Cart</button>
+                </div>
+            </article>
+
+            <article class="product-card fade-in" data-id="6" data-price="75.00">
+                <div class="product-img-wrapper">
+                    <img src="combos_2.png" class="product-img" alt="Gift Combo">
+                    <img src="combos_2_hover.png" class="product-img-hover" alt="Using Combo">
+                </div>
+                <div class="product-info">
+                    <span class="category">Gifts Combos</span>
+                    <h3 class="product-title">Ultimate Relaxation Set</h3>
+                    <p class="product-price">$75.00</p>
+                    <button class="btn btn-outline add-to-cart-btn">Add to Cart</button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2>Ashana Art</h2>
+                <p>Bringing warmth and premium coziness into every handcrafted gift.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Shop</h4>
+                <a href="#">Candles</a>
+                <a href="#">SnowGlobe Cups</a>
+                <a href="#">Combos</a>
+            </div>
+            <div class="footer-links">
+                <h4>Help</h4>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Returns</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ashana Art. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
